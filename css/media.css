@@ -31,8 +31,14 @@
 
   .about,
   .projects,
-  .contact {
+  .contact,
+  .timeline,
+  .achievements {
     padding: 80px 0;
+  }
+
+  .timeline-columns {
+    gap: 60px;
   }
 }
 
@@ -144,18 +150,46 @@
 
   .about,
   .projects,
-  .contact {
+  .contact,
+  .timeline,
+  .achievements {
     padding: 5rem 0;
   }
 
   .title {
     margin-bottom: 30px;
   }
+
+  .timeline-columns {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .timeline-column-title {
+    font-size: 24px;
+  }
+
+  .achievements-row {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .achievement-card {
+    padding: 30px 20px;
+  }
 }
 
 @media (max-width: 720px) {
   .project-box {
     max-width: 100%;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+
+  .achievements-row {
+    grid-template-columns: 1fr;
   }
 }
 
